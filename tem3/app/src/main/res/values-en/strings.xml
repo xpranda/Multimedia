@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tem3</string>
+    <string name="continuar">continue</string>
+    <string name="cancelar">cancel</string>
+</resources>
