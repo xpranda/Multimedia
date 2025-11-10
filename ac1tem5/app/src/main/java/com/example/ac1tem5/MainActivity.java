@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -39,16 +40,20 @@ public class MainActivity extends AppCompatActivity {
         sRecordar = findViewById(R.id.sRecordar);
         tvMensaje = findViewById(R.id.tvMensaje);
 
-
         bContinuar.setOnClickListener(v -> {
             String correo = tCorreo.getText().toString();
             String contraseña = tContraseña.getText().toString();
 
+            Boolean recordar = sRecordar.isChecked();
+
+
             if(correo.equals("ines@correo.com") && contraseña.equals("limon")){
-                tvMensaje.setText("usuario y contraseña correctos");
+                tvMensaje.setText("usuario y contraseña correctos \n Almacenados para siguientes accesos");
+                tvMensaje.setTextColor(ContextCompat.getColor(this, R.color.green));
             }
             else{
                 tvMensaje.setText("usuario y/o contraseña incorrectos");
+                tvMensaje.setTextColor(ContextCompat.getColor(this, R.color.red));
 
             }
 
