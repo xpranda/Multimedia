@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         Animales[] animales = new Animales[2];
         animales[0] = new Animales("Border Collie", "sitesdefaultfilesstylessquare_medium_440x440public2022_09border20collie");
-        animales[1] = new Animales("Teckel", "salchicha");
+        animales[1] = new Animales("Teckel", "images");
 
         AdaptadorPerros adapter = new AdaptadorPerros(animales);
 
