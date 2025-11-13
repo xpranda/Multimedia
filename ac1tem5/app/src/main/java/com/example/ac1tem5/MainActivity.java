@@ -1,5 +1,6 @@
 package com.example.ac1tem5;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
             if(correo.equals("ines@correo.com") && contraseña.equals("limon")){
                 tvMensaje.setText("usuario y contraseña correctos \n Almacenados para siguientes accesos");
                 tvMensaje.setTextColor(ContextCompat.getColor(this, R.color.green));
+                Intent intent = new Intent(this, MenuPrincipal.class);
+                intent.putExtra("correo", correo);
+                startActivity(intent);
+
+
             }
             else{
                 tvMensaje.setText("usuario y/o contraseña incorrectos");
